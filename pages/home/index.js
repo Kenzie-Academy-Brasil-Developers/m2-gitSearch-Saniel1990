@@ -56,14 +56,6 @@ function recentUsersCreator(user) {
     return tagLi    
 }
 
-/*
-<li class="recent-users-pictures">
-<a class="recent-users-link" href=""><img src="" alt=""><button class="button button-link">Acessar este perfil</button></a>
-</li>
-*/
-
-
-
 function addSingleUser(user) {
     let myOnlyser = getSingleUser();
     if (myOnlyser.length >= 1) {
