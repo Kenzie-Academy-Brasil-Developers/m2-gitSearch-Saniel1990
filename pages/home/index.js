@@ -25,7 +25,7 @@ function userFind(url) {
                         addSingleUser(response);
                     }
                 }).catch((error) => console.log(error))
-            window.location.assign("../profile/index.html")
+            window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
         }
     })
 }

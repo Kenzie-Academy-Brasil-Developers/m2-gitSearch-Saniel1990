@@ -18,6 +18,8 @@ function findRepos(url) {
         }).catch((error) => console.log(error))
 }
 
+// link: https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/
+
 headerCreator(myCurrentUser)
 
 function getSingleUser() {
