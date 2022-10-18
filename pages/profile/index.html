@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/globalStyles.css" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Nome do usuário Github</title>
-  </head>
-  <body>
-    <main></main>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/globalStyles.css" />
+  <link rel="stylesheet" href="/styles/texts.css" />
+  <link rel="stylesheet" href="/styles/buttons.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/cards.css" />
+  <link rel="stylesheet" href="index.css" />
+  <title>Nome do usuário Github</title>
+</head>
+
+<body>
+  <header>
+    <nav class="container navbar">
+      <div class="user-info" id="user_info">
+      </div>
+      <div class="buttons-box">
+        <button class="text-1-button button button-brand">Email</button>
+        <button type="button" class="text-1-button button header-button">Trocar de usuário</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <ul class="container cards-container" id="cards_container">
+      </ul>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-box">
+      <p class="text-1-2">Todos os direitos Reservados | Git Search © 2022</p>
+    </div>
+  </footer>
+  <script src="./data.js"></script>
+  <script src="./index.js"></script>
+</body>
+
 </html>

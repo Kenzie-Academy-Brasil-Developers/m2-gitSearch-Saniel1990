@@ -1,1 +1,38 @@
 /* Desenvolva sua estilização aqui...*/
+body{
+    position: relative;
+    background-color: var(--color-grey-2);
+}
+
+.footer-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-top: 2px solid var(--opacity-grey-1);
+    margin-top: 2rem;
+}
+
+.footer-box>p{
+    font-size: 1rem;
+}
+
+.not-found-repos{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color:var(--color-grey-2);
+    width: 80vw;
+    height: 60vh;
+}
+.not-found-repos>p{
+    font-size: 1.3rem;
+}
+
+.alert-span{
+    align-self: center;
+    font-size: 21px;
+    font-weight: 400;
+    color: red;
+    color: var(--color-alert);
+}

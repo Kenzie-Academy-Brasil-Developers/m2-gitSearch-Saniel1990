@@ -1,0 +1,93 @@
+.title-1-1 {
+    /* Título principal/nome do usuário: Samuel Leão */
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.title-2-1 {
+    /* Titulo do card */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.text-1-1 {
+    /* profile-stack */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.text-1-2 {
+    /* Descrição do card */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--opacity-grey-3);
+}
+
+.text-1-button {
+    /* botões do header */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 0px;
+}
+
+.text-2-button {
+    /* botões do card */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+
+
+
+
+
+
+.title-1-2 {
+    /* Titulo: Git Seach, */
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--color-grey-7);
+}
+
+.title-2-2 {
+    /* Titulo: Procurar por um, */
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-grey-7);
+
+}
+
+.text-2-2 {
+    /* sub-titulos: Encontre e se.., */
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--color-grey-7);
+
+}
+
+.text-2-2 {
+    /* informações: Achados recentemente, */
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-grey-7);
+
+}
+
+.text-3-2 {
+    /* labels: Usuário github, */
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--color-grey-7);
+
+}

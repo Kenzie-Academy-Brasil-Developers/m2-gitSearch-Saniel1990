@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 :root{
@@ -14,4 +17,34 @@
     --color-grey-6:  #A6A8A9;
     --color-grey-7:  #FFFFFF;
     --color-alert:   #C22554;
+
+    --opacity-grey-1: rgba(255, 255, 255, 0.1); /*bordas dos cards*/
+    --opacity-grey-2: rgba(255, 255, 255, 0.5); /*Stack do profile*/
+    --opacity-grey-3: rgba(255, 255, 255, 0.6); /*paragrafo do card*/
+
+    --border-rds-1: 0.5rem;
+    --border-rds-2: 0.25rem;
+}
+
+html{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+}
+
+.container{
+  width: 54.4444444%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 920px) {
+  .container{
+    width: 80%;
+  }
+}
+
+@media (max-width:630px) {
+  .container{
+    width: 95%;
+  }
 }

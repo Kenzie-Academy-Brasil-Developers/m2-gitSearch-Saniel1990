@@ -1,0 +1,41 @@
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+    color: var(--color-grey-7);
+    border-radius: var(--border-rds-1);
+    border: none;
+    cursor: pointer;
+}
+
+.header-button {
+    background: #33363A;
+    border: 1px solid #33363A;
+
+}
+
+.header-button:hover {
+    background: #212529;
+}
+
+.button-brand {
+    background: #D6336C;
+}
+
+.button-brand:hover, .button-brand:focus-within {
+    background: #C2255C;
+}
+
+.card-button {
+    background-color: #33363A;
+    padding: 0.5rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+}
+
+.card-button:hover, .card-button:focus-within  {
+    background: #D6336C;
+    border: 1px solid #D6336C;
+}
