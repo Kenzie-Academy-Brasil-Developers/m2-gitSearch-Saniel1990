@@ -1,10 +1,6 @@
 /* Desenvolva sua lógica aqui...*/
-const apiBase = "https://api.github.com/users"
 const recentUsersContainer = document.getElementById('cards_users_box')
-
-const recentUsersArray = getUsersFoundeds();
-console.log(recentUsersArray);
-
+const apiBase = "https://api.github.com/users"
 
 function userFind(url) {
     const buttonSearch = document.getElementById('user_search_bttn');
@@ -23,21 +19,16 @@ function userFind(url) {
                     else{
                         addNRevomeUser(response);
                         addSingleUser(response);
-                        
-                        window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
+                        setTimeout(() => {
+                            window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")                            
+                        }, 5000);
                     }
                 }).catch((error) => console.log(error))
-        }
+            }
     })
 }
 
-
-
-setTimeout(() => {
-    window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
-
-
-}, 5000);
+const recentUsersArray = getUsersFoundeds();
 
 function renderAnything(array, tagContainer, creatorFunction) {
     tagContainer.innerHTML = '';
@@ -55,6 +46,14 @@ function recentUsersCreator(user) {
     
     tagLi.classList.add("recent-users-pictures");
     tagLink.classList.add("recent-users-link");
+
+    tagLink.addEventListener('click', (event) =>{
+        event.preventDefault();
+        addSingleUser(user);
+        setTimeout(() => {
+            window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');            
+        }, 5000);
+    })
     
     tagImg.src = `${user.avatar_url}`;
     tagImg.alt = user.name;
