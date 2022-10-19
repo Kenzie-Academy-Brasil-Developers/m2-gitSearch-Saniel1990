@@ -17,7 +17,7 @@ function userFind(url) {
                         alertSpan.style.color = "var(--color-alert)"
                     }
                     else{
-                        addNRevomeUser(response);
+                        addRecentUser(response);
                         addSingleUser(response);
                         setTimeout(() => {
                             window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")                            
@@ -26,7 +26,7 @@ function userFind(url) {
                 }).catch((error) => console.log(error))
             }
         })
-    renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator)
+    renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator);
 }
 
 const recentUsersArray = getUsersFoundeds();
@@ -80,13 +80,19 @@ function getSingleUser() {
     return JSON.parse(localStorage.getItem("@mySingleUser:SingleUser")) || [];
 }
 
-function addNRevomeUser(user) {
+function addRecentUser(user) {
+    
     let selectedUsers = getUsersFoundeds();
-    if (selectedUsers.length >= 3) {
-        selectedUsers.splice(2, 2);
-        selectedUsers = [user, ...selectedUsers];
-    } else {
-        selectedUsers = [user, ...selectedUsers];
+    if (selectedUsers.includes(user)) {
+        selectedUsers.splice(selectedUsers.indexOf(user), 1)
+        selectedUsers = [user, ...selectedUsers];        
+    }else{
+        if (selectedUsers.length >= 3) {
+            selectedUsers.splice(2, 2);
+            selectedUsers = [user, ...selectedUsers];
+        } else {
+            selectedUsers = [user, ...selectedUsers];
+        }
     }
     localStorage.setItem("@recentUsers:userFound", JSON.stringify(selectedUsers))
 }

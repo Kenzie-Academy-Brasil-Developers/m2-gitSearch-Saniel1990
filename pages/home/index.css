@@ -132,8 +132,17 @@ main {
     font-size: 0.6rem;
     font-weight: 600;
     line-height: 150%;
+    cursor: pointer;
+    background-color: transparent;
+    color: transparent;
 
     height: auto;
     border-radius: 0.25rem;
     border: none;
 }
+
+.recent-users-link>button:hover{
+    background-color: var(--color-grey-7);
+    color: var(--color-brand-1);
+}
+
