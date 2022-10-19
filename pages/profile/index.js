@@ -1,7 +1,15 @@
 /* Desenvolva sua lógica aqui...*/
 const tagUl = document.getElementById('cards_container');
 const tagContainer = document.getElementById('user_info');
+const changeBttn = document.getElementById('change_user');
 let myCurrentUser = getSingleUser();
+
+changeBttn.addEventListener('click', (event) => {
+    event.preventDefault();
+    setTimeout(()=>{
+        window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
+    },5000)
+})
 
 function findRepos(url) {
     fetch(`${url}`, { method: 'GET', headers: { 'Content-Type': 'aplication/json' } })
@@ -17,10 +25,6 @@ function findRepos(url) {
             }
         }).catch((error) => console.log(error))
 }
-
-// link: https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/
-
-headerCreator(myCurrentUser)
 
 function getSingleUser() {
     return JSON.parse(localStorage.getItem("@mySingleUser:SingleUser")) || [];
@@ -68,7 +72,6 @@ function renderAnything(array, tagContainer, creatorFunction) {
 }
 
 function cardCreate(reposItens) {
-    console.log(reposItens)
     const tagLi = document.createElement('l1');
     tagLi.classList.add('card-item');
 
@@ -83,13 +86,13 @@ function cardCreate(reposItens) {
 
     const tagButton1 = document.createElement('button');
     tagButton1.classList = "text-2-button button card-button"
-
+    
     const tagButton2 = document.createElement('button');
     tagButton2.classList = "text-2-button button card-button"
-
+    
     tagButton1.innerText = 'Repositório';
     tagButton2.innerText = 'Demo';
-
+    
     if (reposItens.name) {
         tagTitle.innerText = reposItens.name;
     } else {
@@ -125,3 +128,5 @@ function addNRevomeUser(user) {
     }
     localStorage.setItem("@recentUsers:userFound", JSON.stringify(selectedUsers))
 }
+
+headerCreator(myCurrentUser)
