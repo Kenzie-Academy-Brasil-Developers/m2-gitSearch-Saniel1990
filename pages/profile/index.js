@@ -8,7 +8,7 @@ changeBttn.addEventListener('click', (event) => {
     event.preventDefault();
     setTimeout(()=>{
         window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
-    },5000)
+    },4000)
 })
 
 function findRepos(url) {

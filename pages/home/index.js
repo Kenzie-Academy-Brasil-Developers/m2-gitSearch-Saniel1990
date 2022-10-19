@@ -21,11 +21,12 @@ function userFind(url) {
                         addSingleUser(response);
                         setTimeout(() => {
                             window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")                            
-                        }, 5000);
+                        }, 4000);
                     }
                 }).catch((error) => console.log(error))
             }
-    })
+        })
+    renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator)
 }
 
 const recentUsersArray = getUsersFoundeds();
@@ -52,7 +53,7 @@ function recentUsersCreator(user) {
         addSingleUser(user);
         setTimeout(() => {
             window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');            
-        }, 5000);
+        }, 4000);
     })
     
     tagImg.src = `${user.avatar_url}`;
