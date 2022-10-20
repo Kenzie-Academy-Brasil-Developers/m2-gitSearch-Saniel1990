@@ -6,10 +6,17 @@ const myHeader = document.getElementById('nav_container')
 
 changeBttn.addEventListener('click', (event) => {
     event.preventDefault();
-    setTimeout(()=>{
-        window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
-    },4000)
+    spinnerIn(changeBttn);
+    window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
 })
+
+function spinnerIn(button) {
+    button.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = '../../assets/spinner.svg';
+    img.classList.add('loading');
+    button.appendChild(img);    
+}
 
 function findRepos(url) {
     fetch(`${url}`, { method: 'GET', headers: { 'Content-Type': 'aplication/json' } })

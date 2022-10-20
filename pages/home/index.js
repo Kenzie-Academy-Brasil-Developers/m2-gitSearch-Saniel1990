@@ -60,11 +60,15 @@ function recentUsersCreator(user) {
 
     tagLink.addEventListener('click', (event) => {
         event.preventDefault();
+        tagBttn.style.backgroundColor = 'var(--color-brand-1)'
+        tagBttn.style.border = '2px solid var(--color-grey-7)'
+        tagBttn.style.width = '4.375rem'
+        spinnerIn(tagBttn);
         addSingleUser(user);
         addRecentUsers(user)
-        setTimeout(() => {
+        setTimeout(()=>{
             window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');
-        }, 4000);
+        },2000)
     })
 
     tagImg.src = `${avatar_url}`;
