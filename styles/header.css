@@ -25,11 +25,19 @@ header {
     gap: var(--rem08);
 }
 
+.img-link{
+    width: var(--rem50);
+    height: var(--rem50);
+    border-radius: var(--border-rds-0);
+    background-color: var(--color-grey-7);
+}
+
 .profile-picture {
     width: var(--rem50);
     height: var(--rem50);
     border-radius: var(--border-rds-0);
     background-color: var(--color-grey-7);
+
 }
 
 .profile-title {
@@ -38,6 +46,9 @@ header {
 
 .profile-stack {
     color: var(--opacity-grey-2);
+    height: var(--rem23);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .buttons-box{

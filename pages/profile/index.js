@@ -34,10 +34,15 @@ function getSingleUser() {
 function headerCreator(currentUser) {
     const myUser = currentUser[0];
     tagContainer.innerHTML = '';
+    const tagLink = document.createElement('a')
     const tagImg = document.createElement('img');
     const tagDiv = document.createElement('div');
     const tagTitle = document.createElement('h1');
     const tagSpan = document.createElement('span');
+
+    tagLink.classList.add('img-link');
+    tagLink.href = `https://github.com/${myUser.login}`;
+    tagLink.target = "_blank"
 
     tagImg.classList.add("profile-picture");
     tagDiv.classList.add('profile-descriptions');
@@ -59,8 +64,9 @@ function headerCreator(currentUser) {
         tagSpan.innerText = myUser.bio;
     }
 
+    tagLink.appendChild(tagImg)
     tagDiv.append(tagTitle, tagSpan)
-    tagContainer.append(tagImg, tagDiv)
+    tagContainer.append(tagLink, tagDiv)
     findRepos(myUser.repos_url)
 }
 
