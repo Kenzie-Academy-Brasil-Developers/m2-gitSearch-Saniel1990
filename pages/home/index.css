@@ -117,7 +117,7 @@ main {
     width: 4.375rem;
     height: 4.375rem;
     border-radius: var(--border-rds-0);
-    margin-bottom: -0.7rem;
+    margin-bottom: -0.8rem;
 
 }
 
@@ -135,12 +135,12 @@ main {
     background-color: transparent;
     color: transparent;
 
-    height: auto;
+    height: 24px;
     border-radius: var(--border-rds-2);
     border: none;
 }
 
-.recent-users-link>button:hover{
+.recent-users-link:hover>button{
     background-color: var(--color-grey-7);
     color: var(--color-brand-1);
 }

@@ -7,6 +7,7 @@ function userFind(url) {
     buttonSearch.addEventListener('click', (event) => {
         event.preventDefault();
         const name = document.getElementById('user_search').value;
+        spinnerIn(buttonSearch);
         if (name !== '') {
             fetch(`${url}/${name}`, { method: 'GET', headers: { 'Content-Type': 'aplication/json' } })
                 .then((response) => response.json())
@@ -14,21 +15,29 @@ function userFind(url) {
                     if (response.message == 'Not Found') {
                         const alertSpan = document.getElementById('alert_span');
                         alertSpan.innerText = "Usuário não encontrado!";
-                        setTimeout(() =>{
+                        buttonSearch.innerHTML = '';
+                        buttonSearch.innerText = 'Ver perfil do github';
+                        setTimeout(() => {
                             window.location.reload(true);
-                        }, 2000);
+                        }, 3000);
                     }
                     else {
                         addRecentUsers(response);
                         addSingleUser(response);
-                        setTimeout(() => {
-                            window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")                           
-                        }, 4000);
+                        window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
                     }
                 }).catch((error) => console.log(error))
         }
     })
     renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator);
+}
+
+function spinnerIn(button) {
+    button.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = '../../assets/spinner.svg';
+    img.classList.add('loading');
+    button.appendChild(img);    
 }
 
 function renderAnything(array, tagContainer, creatorFunction) {
@@ -40,7 +49,7 @@ function renderAnything(array, tagContainer, creatorFunction) {
 }
 
 function recentUsersCreator(user) {
-    const { name, avatar_url} = user
+    const { name, avatar_url } = user
     const tagLi = document.createElement('li');
     const tagLink = document.createElement('a');
     const tagImg = document.createElement('img');
@@ -54,7 +63,7 @@ function recentUsersCreator(user) {
         addSingleUser(user);
         addRecentUsers(user)
         setTimeout(() => {
-            window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');            
+            window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');
         }, 4000);
     })
 
