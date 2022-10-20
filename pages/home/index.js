@@ -7,8 +7,8 @@ function userFind(url) {
     buttonSearch.addEventListener('click', (event) => {
         event.preventDefault();
         const name = document.getElementById('user_search').value;
-        spinnerIn(buttonSearch);
         if (name !== '') {
+            spinnerIn(buttonSearch);
             fetch(`${url}/${name}`, { method: 'GET', headers: { 'Content-Type': 'aplication/json' } })
                 .then((response) => response.json())
                 .then((response) => {
@@ -35,7 +35,7 @@ function userFind(url) {
 function spinnerIn(button) {
     button.innerHTML = '';
     const img = document.createElement('img');
-    img.src = '../../assets/spinner.svg';
+    img.src = '../../assets/spinner.png';
     img.classList.add('loading');
     button.appendChild(img);    
 }

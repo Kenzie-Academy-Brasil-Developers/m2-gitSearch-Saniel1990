@@ -13,7 +13,7 @@ changeBttn.addEventListener('click', (event) => {
 function spinnerIn(button) {
     button.innerHTML = '';
     const img = document.createElement('img');
-    img.src = '../../assets/spinner.svg';
+    img.src = '../../assets/spinner.png';
     img.classList.add('loading');
     button.appendChild(img);    
 }
