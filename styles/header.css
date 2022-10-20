@@ -29,7 +29,7 @@ header {
     width: var(--rem50);
     height: var(--rem50);
     border-radius: var(--border-rds-0);
-    background-color: var(--color-grey-7);
+    cursor: pointer;
 }
 
 .profile-picture {
@@ -37,7 +37,6 @@ header {
     height: var(--rem50);
     border-radius: var(--border-rds-0);
     background-color: var(--color-grey-7);
-
 }
 
 .profile-title {
