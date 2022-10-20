@@ -7,7 +7,10 @@ const myHeader = document.getElementById('nav_container')
 changeBttn.addEventListener('click', (event) => {
     event.preventDefault();
     spinnerIn(changeBttn);
-    window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
+    changeBttn.style.width = '8rem';
+    setTimeout(() =>{
+        window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
+    },2000)
 })
 
 function spinnerIn(button) {
