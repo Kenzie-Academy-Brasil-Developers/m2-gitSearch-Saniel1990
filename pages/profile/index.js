@@ -33,6 +33,7 @@ function getSingleUser() {
 
 function headerCreator(currentUser) {
     const myUser = currentUser[0];
+    const {login, avatar_url, name, bio, } =myUser;
     tagContainer.innerHTML = '';
     const tagLink = document.createElement('a')
     const tagImg = document.createElement('img');
@@ -41,7 +42,7 @@ function headerCreator(currentUser) {
     const tagSpan = document.createElement('span');
 
     tagLink.classList.add('img-link');
-    tagLink.href = `https://github.com/${myUser.login}`;
+    tagLink.href = `https://github.com/${login}`;
     tagLink.target = "_blank"
 
     tagImg.classList.add("profile-picture");
@@ -49,19 +50,19 @@ function headerCreator(currentUser) {
     tagTitle.classList = "title-1 profile-title";
     tagSpan.classList.add("profile-stack");
 
-    tagImg.src = `${myUser.avatar_url}`;
-    tagImg.alt = myUser.login;
-    tagTitle.innerText = myUser.login;
-    if (myUser.name == null) {
-        tagTitle.innerText = myUser.login;
+    tagImg.src = `${avatar_url}`;
+    tagImg.alt = login;
+    tagTitle.innerText = login;
+    if (name == null) {
+        tagTitle.innerText = login;
     } else {
-        tagTitle.innerText = myUser.name;
+        tagTitle.innerText = name;
     }
 
-    if (myUser.bio == null) {
+    if (bio == null) {
         tagSpan.innerText = 'Usuário sem bio.';
     } else {
-        tagSpan.innerText = myUser.bio;
+        tagSpan.innerText = bio;
     }
 
     tagLink.appendChild(tagImg)
