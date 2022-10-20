@@ -1,93 +1,76 @@
 .title-1-1 {
-    /* Título principal/nome do usuário: Samuel Leão */
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
+    font-weight: var(--f-weight-1);
+    font-size: var(--f-size-1);
+    line-height: var(--l-height-3);
 }
 
 .title-2-1 {
-    /* Titulo do card */
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-2);
+    line-height: var(--l-height-4);
 }
 
 .text-1-1 {
-    /* profile-stack */
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-3);
+    line-height: var(--l-height-6);
 }
 
 .text-1-2 {
-    /* Descrição do card */
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+    font-weight: var(--f-weight-4);
+    font-size: var(--f-size-4);
+    line-height: var(--l-height-5);
     color: var(--opacity-grey-3);
 }
 
 .text-1-button {
-    /* botões do header */
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: var(--f-weight-2);
+    font-size: var(--f-size-4);
     line-height: 0px;
 }
 
 .text-2-button {
-    /* botões do card */
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-4);
+    line-height: var(--l-height-6);
 }
 
-
-
-
-
-
-
+/* ////////////////////////////////// */
 
 .title-1-2 {
-    /* Titulo: Git Seach, */
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
+    font-weight: var(--f-weight-2);
+    font-size: var(--f-size-0);
+    line-height: var(--l-height-1);
     color: var(--color-grey-7);
 }
 
 .title-2-2 {
-    /* Titulo: Procurar por um, */
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-2);
+    line-height: var(--l-height-2);
     color: var(--color-grey-7);
 
 }
 
 .text-2-2 {
-    /* sub-titulos: Encontre e se.., */
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: var(--f-weight-4);
+    font-size: var(--f-size-2);
+    line-height: var(--l-height-2);
     color: var(--color-grey-7);
 
 }
 
 .text-2-2 {
-    /* informações: Achados recentemente, */
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-3);
+    line-height: var(--l-height-4);
     color: var(--color-grey-7);
 
 }
 
 .text-3-2 {
-    /* labels: Usuário github, */
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 21px;
+    font-weight: var(--f-weight-3);
+    font-size: var(--f-size-4);
+    line-height: var(--l-height-5);
     color: var(--color-grey-7);
-
 }

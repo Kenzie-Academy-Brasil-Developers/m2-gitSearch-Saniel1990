@@ -1,38 +1,27 @@
-/* Desenvolva sua estilização aqui...*/
 body{
     position: relative;
     background-color: var(--color-grey-2);
 }
-
 .footer-box{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: var(--rem50);
     border-top: 2px solid var(--opacity-grey-1);
-    margin-top: 2rem;
+    margin-top: var(--rem10);
 }
 
 .footer-box>p{
-    font-size: 1rem;
+    font-size: var(--f-size-3);
 }
 
 .not-found-repos{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    background-color:var(--color-grey-2);
-    width: 80vw;
-    height: 60vh;
+    width: 100vw;
+    height: 63vh;
 }
 .not-found-repos>p{
-    font-size: 1.3rem;
-}
-
-.alert-span{
-    align-self: center;
-    font-size: 21px;
-    font-weight: 400;
-    color: red;
-    color: var(--color-alert);
+    font-size: var(--rem10);
 }

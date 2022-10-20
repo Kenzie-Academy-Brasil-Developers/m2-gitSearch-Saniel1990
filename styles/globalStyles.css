@@ -22,8 +22,55 @@
     --opacity-grey-2: rgba(255, 255, 255, 0.5); /*Stack do profile*/
     --opacity-grey-3: rgba(255, 255, 255, 0.6); /*paragrafo do card*/
 
-    --border-rds-1: 0.5rem;
-    --border-rds-2: 0.25rem;
+    --border-rds-0: 50%;
+    --border-rds-1: 0.5rem; /* 8px*/
+    --border-rds-2: 0.25rem; /*4px*/
+
+    --f-weight-1: 700;
+    --f-weight-2: 600;
+    --f-weight-3: 500;
+    --f-weight-4: 400;
+
+    --f-size-0: 2rem; /*32px*/
+    --f-size-1: 1.5rem; /*24px*/
+    --f-size-2: 1.25rem; /*20px*/
+    --f-size-3: 1rem; /*16px*/
+    --f-size-4: 0.875rem; /*14px*/
+    --f-size-5: 0.75rem; /*12px*/
+
+    --l-height-1: ; /*48px*/
+    --l-height-2: ; /*30px*/
+    --l-height-3: ; /*29px*/
+    --l-height-4: ; /*24px*/
+    --l-height-5: ; /*21px*/
+    --l-height-6: ; /*19px*/
+    --l-height-6: ; /*17px*/
+
+
+    --rem05: 0.5rem; /* 8px */
+    --rem06: 0.625rem; /* 10px */
+    --rem07: 0.75rem; /* 12px */
+    --rem08: 0.875rem; /* 14px */
+    --rem09: 0.938rem; /* 15px */
+    --rem10: 1rem; /* 16px */
+    --rem10-6: 1.063rem; /* 17px */
+    --rem11: 1.125rem; /* 18px */
+    --rem11-8: 1.188rem; /* 19px */
+    --rem12: 1.25rem; /*20px*/
+    --rem13: 1.375rem; /*22px*/
+    --rem15: 1.5rem; /* 24px */
+    --rem16: 1.625rem; /* 26px */
+    --rem17: 1.75rem; /* 28px*/
+    --rem20: 2rem; /* 32px */
+    --rem23: 2.375rem; /* 38px */
+    --rem25: 2.5rem; /* 40px */
+    --rem30: 3rem; /* 48px */
+    --rem32: 3.25rem; /* 52px */
+    --rem34: 3.438rem; /* 55px */
+    --rem37: 3.75rem; /* 60px */
+    --rem38: 3.813rem; /* 61px */
+    --rem50: 3.813rem; /* 80px */
+    --rem125: 12.5rem; /* 200px */
 }
 
 html{

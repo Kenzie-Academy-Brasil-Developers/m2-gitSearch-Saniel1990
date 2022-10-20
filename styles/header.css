@@ -1,20 +1,20 @@
 header {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: var(--rem125);
 }
 
 .navbar {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 60px 0;
+    padding: var(--rem37) 0;
 }
 
 .user-info {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: var(--rem12);
 }
 
 .profile-descriptions {
@@ -22,14 +22,14 @@ header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 14px;
+    gap: var(--rem08);
 }
 
 .profile-picture {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: var(#FFFFFF);
+    width: var(--rem50);
+    height: var(--rem50);
+    border-radius: var(--border-rds-0);
+    background-color: var(--color-grey-7);
 }
 
 .profile-title {
@@ -37,7 +37,7 @@ header {
 }
 
 .profile-stack {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--opacity-grey-2);
 }
 
 .buttons-box{
@@ -46,6 +46,6 @@ header {
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 0.8rem ;
-    height: 80px;
+    gap: var(--rem08) ;
+    height: var(--rem50);
 }
