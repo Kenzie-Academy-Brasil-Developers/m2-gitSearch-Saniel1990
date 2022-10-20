@@ -40,6 +40,7 @@ function renderAnything(array, tagContainer, creatorFunction) {
 }
 
 function recentUsersCreator(user) {
+    const { name, avatar_url} = user
     const tagLi = document.createElement('li');
     const tagLink = document.createElement('a');
     const tagImg = document.createElement('img');
@@ -57,8 +58,8 @@ function recentUsersCreator(user) {
         }, 4000);
     })
 
-    tagImg.src = `${user.avatar_url}`;
-    tagImg.alt = user.name;
+    tagImg.src = `${avatar_url}`;
+    tagImg.alt = name;
     tagBttn.innerText = 'Acessar este perfil'
 
     tagLink.append(tagImg, tagBttn);
