@@ -8,6 +8,7 @@ changeBttn.addEventListener('click', (event) => {
     event.preventDefault();
     spinnerIn(changeBttn);
     changeBttn.style.width = '8rem';
+    changeBttn.style.height = '1.5rem';
     setTimeout(() =>{
         window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
     },2000)
