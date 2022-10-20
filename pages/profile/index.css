@@ -7,7 +7,7 @@ body{
     align-items: center;
     justify-content: center;
     height: var(--rem50);
-    border-top: 2px solid var(--opacity-grey-1);
+    border-top: 1px solid var(--opacity-grey-1);
     margin-top: var(--rem10);
 }
 
@@ -21,6 +21,7 @@ body{
     align-items: flex-start;
     width: 100vw;
     height: 63vh;
+    padding: var(--rem23);
 }
 .not-found-repos>p{
     font-size: var(--rem10);

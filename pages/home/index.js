@@ -31,7 +31,6 @@ function userFind(url) {
     renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator);
 }
 
-
 function renderAnything(array, tagContainer, creatorFunction) {
     tagContainer.innerHTML = '';
     array.forEach(user => {

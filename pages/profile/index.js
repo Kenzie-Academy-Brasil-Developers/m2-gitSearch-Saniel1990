@@ -1,8 +1,8 @@
-/* Desenvolva sua lógica aqui...*/
 const tagUl = document.getElementById('cards_container');
 const tagContainer = document.getElementById('user_info');
 const changeBttn = document.getElementById('change_user');
 let myCurrentUser = getSingleUser();
+const myHeader = document.getElementById('nav_container')
 
 changeBttn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -18,6 +18,7 @@ function findRepos(url) {
             if (response.length !== 0) {
                 renderAnything(response, tagUl, cardCreate)                
             }else{
+                myHeader.style.borderBottom = "1px solid var(--opacity-grey-1)"
                 tagUl.innerHTML = `
                 <div class="not-found-repos">
                     <p class='text-1-2'>Este usuário ainda não tem repositórios.</p>
