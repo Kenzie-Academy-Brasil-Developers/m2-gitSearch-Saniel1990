@@ -35,7 +35,7 @@ function userFind(url) {
 function spinnerIn(button) {
     button.innerHTML = '';
     const img = document.createElement('img');
-    img.src = './assets/spinner.png';
+    img.src = "./assets/spinner.png";
     img.classList.add('loading');
     button.appendChild(img);    
 }
