@@ -24,6 +24,12 @@
     background-color: var(--color-brand-2);
 }
 
+.inative-button{
+    background-color: var(--opacity-brand-2);
+    color: var(--opacity-grey-7);
+    pointer-events: none;
+}
+
 .button-brand:hover, .button-brand:focus-within {
     background-color: var(--color-alert);
 }

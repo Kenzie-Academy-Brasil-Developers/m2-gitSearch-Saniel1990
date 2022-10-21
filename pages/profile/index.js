@@ -11,7 +11,7 @@ changeBttn.addEventListener('click', (event) => {
     changeBttn.style.height = '1.5rem';
     setTimeout(() =>{
         window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/')
-    },1000)
+    },500)
 })
 
 function spinnerIn(button) {

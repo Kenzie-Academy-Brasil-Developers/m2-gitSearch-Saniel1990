@@ -10,6 +10,7 @@
 :root{
     --color-brand-1: #C2255C;
     --color-brand-2: #D6336C;
+    --opacity-brand-2: rgba(214, 51, 108, 0.4);
     --color-grey-1:  #191C1F;
     --color-grey-2:  #212529;
     --color-grey-3:  #33363A;
@@ -21,6 +22,7 @@
     --opacity-grey-1: rgba(255, 255, 255, 0.1); /*bordas dos cards*/
     --opacity-grey-2: rgba(255, 255, 255, 0.5); /*Stack do profile*/
     --opacity-grey-3: rgba(255, 255, 255, 0.6); /*paragrafo do card*/
+    --opacity-grey-7: rgba(255, 255, 255, 0.35); /*paragrafo do card*/
 
     --border-rds-0: 50%;
     --border-rds-1: 0.5rem; /* 8px*/

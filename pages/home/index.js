@@ -2,6 +2,20 @@ const recentUsersContainer = document.getElementById('cards_users_box')
 const apiBase = "https://api.github.com/users"
 const recentUsersArray = getUsersFoundeds();
 
+function availableButton() {
+    const input = document.getElementById('user_search');
+    const buttonSearch = document.getElementById('user_search_bttn');
+    input.addEventListener('keyup', (event) =>{
+        console.log(event.target.value);
+        if (event.target.value !== '') {
+            buttonSearch.classList = "button button-brand"
+        }else{
+            buttonSearch.classList = "button button-brand inative-button"
+        }
+    })
+}
+
+
 function userFind(url) {
     const buttonSearch = document.getElementById('user_search_bttn');
     buttonSearch.addEventListener('click', (event) => {
@@ -10,24 +24,24 @@ function userFind(url) {
         if (name !== '') {
             spinnerIn(buttonSearch);
             fetch(`${url}/${name}`, { method: 'GET', headers: { 'Content-Type': 'aplication/json' } })
-                .then((response) => response.json())
-                .then((response) => {
-                    if (response.message == 'Not Found') {
-                        const alertSpan = document.getElementById('alert_span');
-                        alertSpan.innerText = "Usuário não encontrado!";
-                        buttonSearch.innerHTML = '';
-                        buttonSearch.innerText = 'Ver perfil do github';
-                        setTimeout(() => {
-                            window.location.reload(true);
-                        }, 3000);
-                    }
-                    else {
-                        addRecentUsers(response);
-                        addSingleUser(response);
-                        window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
-                    }
-                }).catch((error) => console.log(error))
-        }
+            .then((response) => response.json())
+            .then((response) => {
+                if (response.message == 'Not Found') {
+                    const alertSpan = document.getElementById('alert_span');
+                    alertSpan.innerText = "Usuário não encontrado!";
+                    buttonSearch.innerHTML = '';
+                    buttonSearch.innerText = 'Ver perfil do github';
+                    setTimeout(() => {
+                        window.location.reload(true);
+                    }, 3000);
+                }
+                else {
+                    addRecentUsers(response);
+                    addSingleUser(response);
+                    window.location.assign("https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile/")
+                }
+            }).catch((error) => console.log(error))
+            }
     })
     renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator);
 }
@@ -54,10 +68,10 @@ function recentUsersCreator(user) {
     const tagLink = document.createElement('a');
     const tagImg = document.createElement('img');
     const tagBttn = document.createElement('button');
-
+    
     tagLi.classList.add("recent-users-pictures");
     tagLink.classList.add("recent-users-link");
-
+    
     tagLink.addEventListener('click', (event) => {
         event.preventDefault();
         tagBttn.style.backgroundColor = 'var(--color-brand-1)'
@@ -66,15 +80,13 @@ function recentUsersCreator(user) {
         spinnerIn(tagBttn);
         addSingleUser(user);
         addRecentUsers(user)
-        setTimeout(()=>{
-            window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');
-        },1000)
+        window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');
     })
-
+    
     tagImg.src = `${avatar_url}`;
     tagImg.alt = name;
     tagBttn.innerText = 'Acessar este perfil'
-
+    
     tagLink.append(tagImg, tagBttn);
     tagLi.appendChild(tagLink);
     return tagLi
@@ -116,5 +128,6 @@ function getUsersFoundeds() {
     return JSON.parse(localStorage.getItem("@recentUsers:userFound")) || [];
 }
 
-renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator)
+availableButton()
 userFind(apiBase);
+renderAnything(recentUsersArray, recentUsersContainer, recentUsersCreator)
