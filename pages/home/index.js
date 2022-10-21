@@ -68,7 +68,7 @@ function recentUsersCreator(user) {
         addRecentUsers(user)
         setTimeout(()=>{
             window.location.assign('https://kenzie-academy-brasil-developers.github.io/m2-gitSearch-Saniel1990/pages/profile');
-        },2000)
+        },1000)
     })
 
     tagImg.src = `${avatar_url}`;
